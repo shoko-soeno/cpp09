@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbtc_lib.a CMakeFiles/btc_lib.dir/src/BitcoinExchange.cpp.o
+/usr/bin/ranlib libbtc_lib.a

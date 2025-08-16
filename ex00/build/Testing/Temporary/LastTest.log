@@ -1,0 +1,111 @@
+Start testing: Aug 16 14:15 JST
+----------------------------------------------------------
+1/4 Testing: Exchange.LoadAndExactDate
+1/4 Test: Exchange.LoadAndExactDate
+Command: "/home/ssoeno/cpp09/ex00/build/tests" "--gtest_filter=Exchange.LoadAndExactDate" "--gtest_also_run_disabled_tests"
+Directory: /home/ssoeno/cpp09/ex00/build
+"Exchange.LoadAndExactDate" start time: Aug 16 14:15 JST
+Output:
+----------------------------------------------------------
+Running main() from /home/ssoeno/cpp09/ex00/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Exchange.LoadAndExactDate
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Exchange
+[ RUN      ] Exchange.LoadAndExactDate
+[       OK ] Exchange.LoadAndExactDate (0 ms)
+[----------] 1 test from Exchange (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Exchange.LoadAndExactDate" end time: Aug 16 14:15 JST
+"Exchange.LoadAndExactDate" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: Exchange.PreviousLowerDateFallback
+2/4 Test: Exchange.PreviousLowerDateFallback
+Command: "/home/ssoeno/cpp09/ex00/build/tests" "--gtest_filter=Exchange.PreviousLowerDateFallback" "--gtest_also_run_disabled_tests"
+Directory: /home/ssoeno/cpp09/ex00/build
+"Exchange.PreviousLowerDateFallback" start time: Aug 16 14:15 JST
+Output:
+----------------------------------------------------------
+Running main() from /home/ssoeno/cpp09/ex00/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Exchange.PreviousLowerDateFallback
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Exchange
+[ RUN      ] Exchange.PreviousLowerDateFallback
+[       OK ] Exchange.PreviousLowerDateFallback (0 ms)
+[----------] 1 test from Exchange (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Exchange.PreviousLowerDateFallback" end time: Aug 16 14:15 JST
+"Exchange.PreviousLowerDateFallback" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: Exchange.NoEarlierDateThrows
+3/4 Test: Exchange.NoEarlierDateThrows
+Command: "/home/ssoeno/cpp09/ex00/build/tests" "--gtest_filter=Exchange.NoEarlierDateThrows" "--gtest_also_run_disabled_tests"
+Directory: /home/ssoeno/cpp09/ex00/build
+"Exchange.NoEarlierDateThrows" start time: Aug 16 14:15 JST
+Output:
+----------------------------------------------------------
+Running main() from /home/ssoeno/cpp09/ex00/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Exchange.NoEarlierDateThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Exchange
+[ RUN      ] Exchange.NoEarlierDateThrows
+[       OK ] Exchange.NoEarlierDateThrows (0 ms)
+[----------] 1 test from Exchange (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Exchange.NoEarlierDateThrows" end time: Aug 16 14:15 JST
+"Exchange.NoEarlierDateThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: Validation.DateAndValueRules
+4/4 Test: Validation.DateAndValueRules
+Command: "/home/ssoeno/cpp09/ex00/build/tests" "--gtest_filter=Validation.DateAndValueRules" "--gtest_also_run_disabled_tests"
+Directory: /home/ssoeno/cpp09/ex00/build
+"Validation.DateAndValueRules" start time: Aug 16 14:15 JST
+Output:
+----------------------------------------------------------
+Running main() from /home/ssoeno/cpp09/ex00/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.DateAndValueRules
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.DateAndValueRules
+[       OK ] Validation.DateAndValueRules (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.DateAndValueRules" end time: Aug 16 14:15 JST
+"Validation.DateAndValueRules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 16 14:15 JST

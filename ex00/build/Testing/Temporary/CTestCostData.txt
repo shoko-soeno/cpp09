@@ -1,0 +1,5 @@
+Exchange.LoadAndExactDate 1 0.00115497
+Exchange.PreviousLowerDateFallback 1 0.000938153
+Exchange.NoEarlierDateThrows 1 0.0010068
+Validation.DateAndValueRules 1 0.000868794
+---

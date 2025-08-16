@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/btc.dir/src/main.cpp.o -o btc  libbtc_lib.a 
