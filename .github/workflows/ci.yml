@@ -5,7 +5,12 @@ on:
 
 jobs:
   build-test:
+    name: ${{ matrix.ex }}
     runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        ex: [ex00, ex01, ex02]
+
     steps:
       - uses: actions/checkout@v4
 
@@ -14,11 +19,33 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essential
 
       # ex00 を CMake（Unix Makefiles）で設定
+      # - name: Configure (CMake, Makefiles)
+      #   run: cmake -S ex00 -B build/ex00 -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+      # - name: Build
+      #   run: cmake --build build/ex00 --parallel
+
+      # - name: Test (ctest)
+      #   run: ctest --test-dir build/ex00 --output-on-failure -j 2
+
+      # CMakeLists.txt が無い課題は自動スキップ
+      - name: Check CMakeLists exists
+        id: has_cmakelists
+        run: |
+          if [ -f "${{ matrix.ex }}/CMakeLists.txt" ]; then
+            echo "present=true" >> $GITHUB_OUTPUT
+          else
+            echo "present=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Configure (CMake, Makefiles)
-        run: cmake -S ex00 -B build/ex00 -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+        if: steps.has_cmakelists.outputs.present == 'true'
+        run: cmake -S ${{ matrix.ex }} -B build/${{ matrix.ex }} -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 
       - name: Build
-        run: cmake --build build/ex00 --parallel
+        if: steps.has_cmakelists.outputs.present == 'true'
+        run: cmake --build build/${{ matrix.ex }} --parallel
 
       - name: Test (ctest)
-        run: ctest --test-dir build/ex00 --output-on-failure -j 2
+        if: steps.has_cmakelists.outputs.present == 'true'
+        run: ctest --test-dir build/${{ matrix.ex }} --output-on-failure -j 2
