@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      # make とコンパイラ（必要十分）
+      - name: Install build essentials
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      # ex00 を CMake（Unix Makefiles）で設定
+      - name: Configure (CMake, Makefiles)
+        run: cmake -S ex00 -B build/ex00 -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build/ex00 --parallel
+
+      - name: Test (ctest)
+        run: ctest --test-dir build/ex00 --output-on-failure -j 2
